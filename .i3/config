@@ -39,7 +39,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+` exec --no-startup-id morc_menu
 
 #Launch app with <SUPER> + <KEYPAD 1-9>
-bindsym $mod+KP_End exec vivaldi-stable
+bindsym $mod+KP_End exec firefox
 bindsym $mod+KP_Down exec emacs
 bindsym $mod+KP_Page_Down exec $varTerm -e ranger -r ~/.config/ranger
 
