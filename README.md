@@ -1,5 +1,10 @@
 # i3 Dotfiles with [Nord Theme](https://www.nordtheme.com/)
 
+![](prev1.png)
+![](prev2.png)
+
+
+[Wallpaper](https://www.pexels.com/photo/forest-mountains-fog-clouds-9754/)
 ### Including
   - urxvt theme
   - customized polybar based on default theme
