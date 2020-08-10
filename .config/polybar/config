@@ -17,15 +17,15 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #282a36
-background-alt = #282a36
+;background = ${xrdb:color0:#2e3440}
+background = #2e3440
+background-alt = #3b4252
 ;foreground = ${xrdb:color7:#222}
-foreground = #f8f8f2
-foreground-alt = #f8f8f2
-primary = #5272a4
-secondary = #ffb86c
-alert = #ff5555
+foreground = #eceff4
+foreground-alt = #eceff4
+primary = #71ABD1
+secondary = #ebcb8b
+alert = #bf616a
 
 [bar/bar1]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -39,7 +39,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-; line-color = #f00
+; line-color = #bf616a
 
 ; border-size = 4
 ; border-color = #00000000
@@ -50,13 +50,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = "Fantasque Sans Mono:pixelsize=10;3"
+font-1 = "Iosevka:pixelsize=10;3"
 
 modules-left = i3 mpd
-modules-center =
-modules-right = cpu date powermenu
+modules-center = date
+modules-right = powermenu
 
 tray-position = right
 tray-padding = 2
@@ -81,32 +80,35 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+pin-workspace = false
+
+ws-icon-default = 
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.foreground}
-label-mode-background = ${colors.primary}
+label-mode-background = #3b4252
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused = 
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = 
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
@@ -127,13 +129,6 @@ icon-next = 
 label-song-maxlen = 25
 label-song-ellipsis = true
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage:2%%
-
 [module/date]
 type = internal/date
 interval = 5
@@ -142,7 +137,7 @@ date = %Y-%m-%d
 date-alt = "It's %d %B %Y %H:%M:%S"
 
 time = %H:%M
-time-alt = 
+time-alt =
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
