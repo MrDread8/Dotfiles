@@ -24,7 +24,7 @@
 
 ### Instalation
 ```sh
-$ git clone git@gitlab.com:riviofficial/i3-config.git
+$ git clone git@gitlab.com:riviofficial/dotfiles.git
 $ cd dotfiles
 $ cp .bashrc ~/ && cp -r .config/polybar ~/.config/polybar && cp .i3 ~/ && cp .Xresources ~/ && cp .zshrc ~/ 
 ```
