@@ -1,0 +1,19 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1013,
+       "width": 1920,
+       "x": 0,
+       "y": 67
+    },
+    "percent": 1,
+    "swallows": [
+       {
+         "class": "^Atom$",
+         "instance": "^atom$"
+       }
+    ],
+    "type": "con"
+}
