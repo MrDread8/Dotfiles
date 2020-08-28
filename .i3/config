@@ -26,6 +26,9 @@ font xft:URWGothic-Book 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
+#bind browser
+set $varBrowser google-chrome-stable
+
 # start a terminal
 set $varTerm urxvt
 bindsym $mod+Return exec $varTerm
@@ -39,8 +42,8 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+` exec --no-startup-id morc_menu
 
 #Launch app with <SUPER> + <KEYPAD 1-9>
-bindsym $mod+KP_End exec firefox
-bindsym $mod+KP_Down exec atom
+bindsym $mod+KP_End append_layout ~/.layout/workspace-1.json; exec $varBrowser;exec $varTerm
+bindsym $mod+KP_Down append_layout ~/.layout/workspace-2.json; exec atom
 bindsym $mod+KP_Page_Down exec $varTerm -e ranger -r ~/.config/ranger
 
 #Launch with <SUPER> + <SHIFT> + <KEYPAD 1-9>
