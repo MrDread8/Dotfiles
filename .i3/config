@@ -71,7 +71,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 
-# focus_follows_mouse no
+focus_follows_mouse no
 
 # change focus
 bindsym $mod+h focus left
@@ -171,10 +171,9 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="Thunderbird"] $ws1
-assign [class="ranger"] $ws2
+assign [class="^URxvt$" title="^ranger$"] $ws2
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
