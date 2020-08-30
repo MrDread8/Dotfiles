@@ -10,6 +10,7 @@
   - urxvt theme
   - .xresources [Nord Theme](https://www.nordtheme.com/) palette
   - Rofi theme
+  - custom polybar theme
 
 ## Dependencies
 
@@ -31,7 +32,7 @@ $ cp .bashrc ~/ && cp -r .config/polybar ~/.config/polybar && cp .i3 ~/ && cp .X
 ```
 
 ### TODO
- - customized polybar based on default theme
+ 
 
 #### License
 
