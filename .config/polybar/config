@@ -17,10 +17,8 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#2e3440}
 background = #2e3440
 background-alt = #3b4252
-;foreground = ${xrdb:color7:#222}
 foreground = #eceff4
 foreground-alt = #eceff4
 primary = #71ABD1
@@ -28,21 +26,14 @@ secondary = #ebcb8b
 alert = #bf616a
 
 [bar/bar1]
-;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
-;offset-x = 1%
-;offset-y = 1%
 fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
-; line-color = #bf616a
-
-; border-size = 4
-; border-color = #00000000
 
 padding-left = 0
 padding-right = 2
@@ -54,24 +45,8 @@ font-0 = "Fantasque Sans Mono:pixelsize=10;3"
 font-1 = "Iosevka:pixelsize=10;3"
 
 modules-left = i3
-modules-center = date
-modules-right = kernel
-
-;tray-position = left
-;tray-padding = 2
-;tray-output = none
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+modules-center =
+modules-right = date network kernel
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -85,74 +60,52 @@ pin-workspace = false
 
 ws-icon-default = 
 
-; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.foreground}
 label-mode-background = #3b4252
 
-; focused = Active workspace on focused monitor
 label-focused = 
 label-focused-background = ${colors.background}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
-; unfocused = Inactive workspace on any monitor
 label-unfocused = 
 label-unfocused-padding = 2
 
-; visible = Active workspace on unfocused monitor
 label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
-; urgent = Workspace with urgency hint set
 label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-; Separator in between workspaces
-;
-; label-separator = |
-
-
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
-
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
 [module/date]
 type = internal/date
-interval = 5
-
-date = %Y-%m-%d
-date-alt = "It's %d %B %Y %H:%M:%S"
-
+interval = 3
+date = %d-%m
 time = %H:%M
-time-alt =
-
-format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 
-label = %date% %time%
+label = %time% %date%
+
+[module/network]
+type = internal/network
+interface = enp6s0
+interval = 3.0
+ping-interval = 10
+format-connected = <label-connected>
+label-connected = %local_ip%   %upspeed%   %downspeed%
 
 [module/kernel]
 type = custom/script
 exec = uname -r
 format = <label>
-label = %output%
-format-prefix = 
-format-prefix-foreground = #EBCB8B
+label = %output%
+
 
 [settings]
 screenchange-reload = true
