@@ -5,7 +5,7 @@
 ![](prev3.png)
 
 
-[Wallpaper Photo by Creative Vix from Pexels](https://www.pexels.com/photo/forest-mountains-fog-clouds-9754/)
+[Wallpaper Photo](https://imgur.com/a/CaBdJ)
 ### Including
   - urxvt theme
   - .xresources [Nord Theme](https://www.nordtheme.com/) palette
