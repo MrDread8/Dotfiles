@@ -5,11 +5,12 @@
 ![](prev3.png)
 
 
-[Wallpaper Photo by Creative Vix from Pexels](https://www.pexels.com/photo/forest-mountains-fog-clouds-9754/)
+[Wallpaper Photo](https://imgur.com/a/CaBdJ)
 ### Including
   - urxvt theme
   - .xresources [Nord Theme](https://www.nordtheme.com/) palette
   - Rofi theme
+  - custom polybar theme
 
 ## Dependencies
 
@@ -31,7 +32,7 @@ $ cp .bashrc ~/ && cp -r .config/polybar ~/.config/polybar && cp .i3 ~/ && cp .X
 ```
 
 ### TODO
- - customized polybar based on default theme
+ 
 
 #### License
 
