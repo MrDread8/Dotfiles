@@ -11,8 +11,8 @@
     "percent": 0.75,
     "swallows": [
        {
-       "class": "^Google\\-chrome$",
-       "instance": "^google\\-chrome$"
+       "class": "^firefox$",
+       "instance": "^Navigator$"
        }
     ],
     "type": "con"
