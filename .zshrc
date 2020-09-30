@@ -99,4 +99,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias layout="$HOME/Layout/launch.sh"
+alias loopback="pactl load-module module-loopback latency_msec=1"

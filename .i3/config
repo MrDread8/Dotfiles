@@ -57,9 +57,9 @@ bindsym $mod+Shift+KP_1 exec $varTerm -e htop
 ################################################################################################
 
 #exec --no-startup-id volumeicon
-exec --no-startup-id pulseaudio
+exec --no-startup-id pulseaudio --start
 #exec --no-startup-id pa-applet
-
+exec --no-startup-id pactl load-module module-loopback latency_msec=1
 ################################################################################################
 
 # Screen brightness controls
