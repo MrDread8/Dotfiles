@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 #bind browser
-set $varBrowser firefox
+set $varBrowser google-chrome-stable
 
 #bind editor
 set $varEditor emacs
@@ -45,7 +45,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+` exec --no-startup-id morc_menu
 
 #Launch app with <SUPER> + <KEYPAD 1-9>
-bindsym $mod+KP_End append_layout ~/.layout/workspace-1.json; exec $varBrowser;exec $varTerm
+bindsym $mod+KP_End exec $varBrowser
 bindsym $mod+KP_Down append_layout ~/.layout/workspace-2.json; exec $varEditor;exec $varTerm
 bindsym $mod+KP_Page_Down exec $varTerm -e ranger -r ~/.config/ranger
 
@@ -60,6 +60,7 @@ bindsym $mod+Shift+KP_1 exec $varTerm -e htop
 exec --no-startup-id pulseaudio --start
 #exec --no-startup-id pa-applet
 exec --no-startup-id pactl load-module module-loopback latency_msec=1
+
 ################################################################################################
 
 # Screen brightness controls
@@ -171,7 +172,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 assign [class="^Google\\-chrome$"] $ws1
-assign [class="^URxvt$" title="^ranger$"] $ws2
+assign [class="^URxvt$" title="^ranger$"] $ws3
 assign [class="^Atom$"] $ws2
 assign [class="^Steam$"] $ws3
 
@@ -200,7 +201,7 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
+#for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="inkscape"] floating enable border normal
 
