@@ -1,1 +1,0 @@
-/home/kacperz/.i3/
