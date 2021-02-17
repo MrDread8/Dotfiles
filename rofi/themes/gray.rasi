@@ -2,12 +2,12 @@
  Based on Pop-Dark rofi theme Author: Primetoxinz
 */
 * {
-    text-color:                  #ECEFF4;
-    background-color:            #3B4252;
-    lightbg:                     #3B4252;
+    text-color:                  #FFFFFF;
+    background-color:            #232830;
+    lightbg:                     #A7ADBA;
     red:                         #BF616A;
     orange:                      #D08770;
-    blue:                        #5E81AC;
+    blue:                        #DCA432;
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
@@ -32,7 +32,7 @@
     active-background:           @orange;
 }
 #window {
-    border:     0;
+    border:     1;
     text-color: @foreground;
     background-color: rgba ( 0, 0, 0, 0 % );
     padding:    5;

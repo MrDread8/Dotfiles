@@ -82,6 +82,7 @@ if ${use_color} ; then
 	alias egrep='egrep --colour=auto'
 	alias fgrep='fgrep --colour=auto'
 	alias layout='$HOME/Layout/launch.sh'
+	alias player='$HOME/scripts/watchmpv.sh'
 else
 	if [[ ${EUID} == 0 ]] ; then
 		# show root@ when we don't have colors

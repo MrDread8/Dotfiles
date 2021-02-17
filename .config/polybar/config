@@ -17,13 +17,13 @@
 ;==========================================================
 
 [colors]
-background = #3B4252
-background-alt = #3b4252
-foreground = #eceff4
-foreground-alt = #eceff4
-primary = #71ABD1
-secondary = #ebcb8b
-alert = #bf616a
+background = #242830
+background-alt = #878787
+foreground = #FFFFFF
+foreground-alt = #353C46 
+primary = #D5A231
+secondary = #31A4D5
+alert = #D54E31
 
 [bar/bar1]
 width = 100%
@@ -46,7 +46,7 @@ font-1 = "Iosevka:pixelsize=10;3"
 
 modules-left = i3
 modules-center =
-modules-right = date network kernel
+modules-right = network kernel date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -58,20 +58,24 @@ index-sort = true
 wrapping-scroll = false
 pin-workspace = false
 
-ws-icon-default = 
-
-;pin-workspaces = true
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-default = x;
 
 label-mode-padding = 2
 label-mode-foreground = ${colors.foreground}
 label-mode-background = #3b4252
 
-label-focused = 
+label-focused = %icon%
 label-focused-background = ${colors.background}
 label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
-label-unfocused = 
+label-unfocused = %icon%
 label-unfocused-padding = 2
 
 label-visible = %icon%
